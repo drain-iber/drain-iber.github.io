@@ -2,6 +2,6 @@
 Drain Plugin
 ===============
 
-El plugin de Drain es una herramienta esencial para la gestión integrada del ciclo del agua.
+The Drain plugin is an essential tool for integrated water cycle management.
 
-A continuación se detallará la funcionalidad y objetivo de cada una de las herramientas.
+Below, the functionality and purpose of each of the tools will be detailed.

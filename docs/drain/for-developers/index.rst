@@ -1,8 +1,7 @@
 ===============
-Guía del Desarrollador de Drain
+Drain Developer Guide
 ===============
 
-Guía para desarrolladores de Drain.
+Guide for Drain developers.
 
 .. TODO: Add index here
-

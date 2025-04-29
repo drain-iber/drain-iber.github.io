@@ -1,52 +1,52 @@
 =================
-Documentación de Drain |version|
+Drain Documentation |version|
 =================
 
 .. only:: testing
 
-  .. attention::  Estás leyendo la versión de prueba de la documentación de Drain,
-    un trabajo en progreso que incluye los últimos cambios en el software y puede
-    documentar funciones no disponibles o compatibles con Drain.
+  .. attention::  You are reading the testing version of the Drain documentation,
+    a work in progress that includes the latest changes in the software and may
+    document features not yet available or supported in Drain.
 
 .. only:: not testing
 
-  .. hint:: ¿Buscás documentación de versiones más nuevas que la
-    |version|? Dale un vistazo a la
-    `documentación de prueba <https://docs.drain.org/testing/es_CR/>`_.
+  .. hint:: Looking for documentation for versions newer than
+    |version|? Check out the
+    `testing documentation <https://docs.drain.org/testing/en/>`_.
 
-.. note:: La documentación de Drain está disponible en varios idiomas y versiones.
-  Expandí el menú :guilabel:`Documentación de Drain` en la parte inferior de la
-  barra lateral para ver la lista.
-
-
-Bienvenido a la documentación oficial de `Drain <https://www.drain.org>`_,
-una guía optimizada y personalizada para el uso de Drain en tu organización.
-Rápida, dinámica y construida para adaptarse a tus necesidades, esta documentación está
-estructurada para darte la mejor experiencia mientras navegás por las funciones de Drain.
+.. note:: Drain documentation is available in multiple languages and versions.
+  Expand the :guilabel:`Drain Documentation` menu at the bottom of the
+  sidebar to see the list.
 
 
-.. note:: Bienvenido a Drain, el primer software libre con el objetivo de
-   realizar una gestión integrada del ciclo del agua (abastecimiento y saneamiento).
+Welcome to the official documentation for `Drain <https://www.drain.org>`_,
+an optimized and personalized guide for using Drain in your organization.
+Fast, dynamic, and built to adapt to your needs, this documentation is
+structured to give you the best experience as you navigate Drain’s features.
 
-    * Enviá un reporte o pull request en el `repositorio de GitHub
+
+.. note:: Welcome to Drain, the first free software aimed at
+   integrated water cycle management (supply and sanitation).
+
+    * Submit a report or pull request in the `GitHub repository
       <https://github.com/drain-iber/Drain-Documentation/>`_,
 
-Por favor, dale un vistazo a uno de los documentos a continuación.
+Please take a look at one of the documents below.
 
 .. toctree::
    :maxdepth: 2
-   :caption: PARA USUARIOS
+   :caption: FOR USERS
 
-   Manual de usuario de Drain <drain/for-users/user-manual/index>
-
-.. toctree::
-   :maxdepth: 2
-   :caption: PARA DESARROLLADORES
-
-   Documentación para desarrolladores <drain/for-developers/index>
+   Drain User Manual <drain/for-users/user-manual/index>
 
 .. toctree::
    :maxdepth: 2
-   :caption: PARA ADMINISTRADORES
+   :caption: FOR DEVELOPERS
 
-   Documentación para administradores <drain/for-admins/index>
+   Developer Documentation <drain/for-developers/index>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: FOR ADMINISTRATORS
+
+   Administrator Documentation <drain/for-admins/index>

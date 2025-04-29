@@ -1,5 +1,5 @@
 ===============
-Introducción
+Introduction
 ===============
 
 .. only:: html
@@ -7,4 +7,4 @@ Introducción
    .. contents::
       :local:
 
-Bienvenido a la guía de usuario de Drain.
+Welcome to the Drain user guide.

@@ -2,9 +2,9 @@
 #
 
 # You can set these variables from the command line.
-LANG            = es_CR
+LANG            = en
 # currently we are building for the following languages, if you want yours to be build: ask!
-LANGUAGES       = es_CR es_ES ca en # pt_PT pt_BR
+LANGUAGES       = en # es_CR es_ES ca
 SPHINXOPTS      =
 # Use the tag i18n to filter text based on whether we are translating or not
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG) -t i18n
@@ -50,7 +50,7 @@ sync-from-i18n:
 
 html:
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS)"
-	if [ $(LANG) != "es_CR" ]; then \
+	if [ $(LANG) != "en" ]; then \
 		$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXINTLOPTS) $(0); \
 	else \
 		$(SPHINXBUILD) -b html -n --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \

@@ -1,7 +1,7 @@
 ===============
-Guía del Administrador de Drain
+Drain Administrator Guide
 ===============
 
-Guía para administradores de Drain.
+Guide for Drain administrators.
 
 .. TODO: Add index here
