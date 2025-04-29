@@ -111,6 +111,8 @@ html_favicon = 'static/common/logo.png'
 html_static_path = ['static']
 
 
+html_baseurl = 'https://drain-iber.github.io/testing/en/'
+
 # Set a bullet character for :menuselection: role
 # easier to identify in non latin languages, e.g. japanese
 MenuSelection.BULLET_CHARACTER = '\u25BA'  # '\N{BLACK RIGHT-POINTING POINTER}'
