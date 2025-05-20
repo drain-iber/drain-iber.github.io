@@ -1,6 +1,6 @@
-=================
+=============================
 Drain Documentation |version|
-=================
+=============================
 
 .. only:: testing
 
@@ -36,7 +36,7 @@ Please take a look at one of the documents below.
 .. toctree::
    :maxdepth: 2
    :caption: FOR USERS
-
+   
    Drain User Manual <drain/for-users/user-manual/index>
 
 .. toctree::
