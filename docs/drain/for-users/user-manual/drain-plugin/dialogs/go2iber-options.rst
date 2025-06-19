@@ -109,7 +109,7 @@ Numerical scheme
 ----------------
 
 - Equation order:
-- CFL:
+- CFL: 0.45
 - Delta time:
 - Wet-dry edge:
 - Viscosity coefficient:
