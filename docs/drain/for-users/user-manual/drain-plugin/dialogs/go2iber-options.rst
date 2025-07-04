@@ -117,10 +117,10 @@ Numerical scheme
 Time & Simulation control
 -------------------------
 
-- Initial time:
-- Tmax:
-- Rank results:
-- Timeseries rank results:
+- Initial time: instant in which the calculation begins
+- Max simulation time: instant in which the calculation ends
+- Results 2D time interval: indicates the time interval length in which results are calculated
+- Timeseries time interval: selection of the time interval length in which results are written
 - Simulation details are written:
 - New simulation or current simulation:
 - Enable or disable simulation plan:
