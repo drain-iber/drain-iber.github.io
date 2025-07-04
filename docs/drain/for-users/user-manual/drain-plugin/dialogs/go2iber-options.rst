@@ -117,8 +117,8 @@ Numerical scheme
 Time & Simulation control
 -------------------------
 
-- Initial time: instant in which the calculation begins
-- Max simulation time: instant in which the calculation ends
+- Initial time: instant in which the calculation begins. It is just an "offset" and oes not affect the results. 
+- Max simulation time: instant in which the calculation ends. The time difference between the "initial time" and the "max simulation time" indicates the total simulation time.
 - Results 2D time interval: indicates the time interval length in which results are calculated
 - Timeseries time interval: selection of the time interval length in which results are written
 - Simulation details are written:
