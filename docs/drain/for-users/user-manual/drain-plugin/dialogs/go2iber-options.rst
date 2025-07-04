@@ -100,7 +100,7 @@ Project details
 ---------------
 
 - Project name: name of the project.
-- Description: a sort description of the project.
+- Description: a short description of the project.
 - User: name of the user.
 - Creation date: creation date of the project.
 - Version: Drain version.
