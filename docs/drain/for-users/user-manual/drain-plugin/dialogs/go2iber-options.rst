@@ -115,10 +115,9 @@ convergence issues may arise in the solution of the equations. A value of 0.45 c
  to 0.3 if convergence problems are observed.
 - Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In 
 practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
-- Wet-dry limit: It is the depth threshold above which an element is considered wet. Below
- this value, the element is considered dry, and therefore no computations are performed on it, unless it becomes wet. In 
- river engineering, a threshold of 0.01 m is generally reasonable, although in some cases it could be reduced to as little as 0.001 m. Lower values give more precise results, while
- increasing (in some cases significantly) the computation time.
+- Wet-dry limit: this is the depth threshold above which an element is considered wet. Below this value, the element is considered dry, 
+and therefore no computations are performed on it, unless it becomes wet. While in 
+ river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m.
 - Viscosity coefficient:
   
   ..important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
@@ -138,13 +137,14 @@ Time & Simulation control
 Hydrological processes
 ----------------------
 
-- Start time:
-- Type of rain:
+- Start time infiltration:
+- Precipitation:
 - Set rainfall for all hyetografs:
 - Set rainfall raster:
-- Method used for losses:
-- CN multiplier:
-- Ia:
+- Losses model: here you can select the infiltration model to apply. You can choose between *SCS* (Soil Conservation Service) infiltration model or *no losses* model 
+- CN multiplier: multiplier of the CN parameter of the SCS model. 
+- Ia: Initial abstraction. Refers to the portion of rainfall that is retained or lost before producing surface runoff. When no specific information about the catchment is available, 
+a typical value of 0.2 is often used.  
 
 Tab IBER RESULTS
 ================
@@ -155,14 +155,14 @@ Tab IBER RESULTS
 
 The following options are available:
 
-- Depth:
-- Velocity:
-- Specific discharge:
-- Water elevation:
-- Maximum depth:
-- Maximum velocity:
-- Maximum specific discharge:
-- Maximum water elevation:
+- Depth: refers to the vertical distance from the bed to the free surface of the water, expressed in meters
+- Velocity: refers to the depth-averaged flow velocity, expressed in meters per second (m/s)
+- Specific discharge: refers to the flow rate per unit width, expressed in square meters per second (m²/s)
+- Water elevation: refers to the height of the water surface, commonly expressed in meters above the sea level (m).
+- Maximum depth: the maximum water depth reached at each specific element during the simulation (m).
+- Maximum velocity: the maximum velocity reached at each specific element during the simulation (m/s).
+- Maximum specific discharge: the maximum specific discharge reached at each specific element during the simulation (m2/s).
+- Maximum water elevation: the maximum water elevation reached at each specific element during the simulation (m)
 - Energy:
 - Froude number:
 - Local time step:
