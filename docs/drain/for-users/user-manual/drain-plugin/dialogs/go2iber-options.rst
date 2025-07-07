@@ -110,7 +110,7 @@ Numerical scheme
 
 - Numerical scheme: you can choose between various numerical schemes. 1st Order is recommended for hydraulic calculations, while DHD
  is recommended for hidrological rain-surface flow transfromations.
-- CFL: 0.45 Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but 
+- CFL: Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but 
 convergence issues may arise in the solution of the equations. A value of 0.45 can be considered appropriate as a starting point, and it can be lowered
  to 0.3 if convergence problems are observed.
 - Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In 
