@@ -108,16 +108,25 @@ Project details
 Numerical scheme
 ----------------
 
-- Equation order:
-- CFL: 0.45
-- Delta time:
-- Wet-dry edge: 0.0001
+- Numerical scheme: you can choose between various numerical schemes. 1st Order is recommended for hydraulic calculations, while DHD
+ is recommended for hidrological rain-surface flow transfromations.
+- CFL: 0.45 Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but 
+convergence issues may arise in the solution of the equations. A value of 0.45 can be considered appropriate as a starting point, and it can be lowered
+ to 0.3 if convergence problems are observed.
+- Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In 
+practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
+- Wet-dry limit: It is the depth threshold above which an element is considered wet. Below
+ this value, the element is considered dry, and therefore no computations are performed on it, unless it becomes wet. In 
+ river engineering, a threshold of 0.01 m is generally reasonable, although in some cases it could be reduced to as little as 0.001 m. Lower values give more precise results, while
+ increasing (in some cases significantly) the computation time.
 - Viscosity coefficient:
   
+  ..important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
+
 Time & Simulation control
 -------------------------
 
-- Initial time: instant in which the calculation begins. It is just an "offset" and oes not affect the results. 
+- Initial time: instant in which the calculation begins. It is just an "offset" and does not affect the results. 
 - Max simulation time: instant in which the calculation ends. The time difference between the "initial time" and the "max simulation time" indicates the total simulation time.
 - Results 2D time interval: indicates the time interval length in which results are calculated
 - Timeseries time interval: selection of the time interval length in which results are written
