@@ -155,7 +155,7 @@ Tab IBER RESULTS
 
 The following options are available:
 
-- Depth: refers to the vertical distance from the bed to the free surface of the water, expressed in meters
+- Depth: refers to the vertical distance from the bed to the free surface of the water, expressed in meters (m). 
 - Velocity: refers to the depth-averaged flow velocity, expressed in meters per second (m/s)
 - Specific discharge: refers to the flow rate per unit width, expressed in square meters per second (m²/s)
 - Water elevation: refers to the height of the water surface, commonly expressed in meters above the sea level (m).
@@ -163,21 +163,24 @@ The following options are available:
 - Maximum velocity: the maximum velocity reached at each specific element during the simulation (m/s).
 - Maximum specific discharge: the maximum specific discharge reached at each specific element during the simulation (m2/s).
 - Maximum water elevation: the maximum water elevation reached at each specific element during the simulation (m)
-- Energy:
-- Froude number:
+- Energy: refers to the total hydraulic energy per unit weight of water, typically resulting from the sum of elevation head, pressure head, and velocity head, expressed in meters (m)
+- Froude number: a dimensionless number that represents the ratio between inertial and gravitational forces. 
+A value equal to 1 indicates critical flow; values less than 1 indicate subcritical flow, while values greater than 1 indicate supercritical flow.
 - Local time step:
 - Maximum local time step:
-- Hazard RD9/2008:
-- Hazard ACA 2003:
-- Raster results:
-- Cell size (m):
-- Maximum critical diameter:
+- Hazard RD9/2008: calculated hazard according to RD9/2008 regulation (Spain). 
+- Hazard ACA 2003: flood hazard calculated following the criteria by the ACA (*Agencia Catalana del Agua*).
+- Raster results: if selected, raster results will be writen. The interpolation mode must be selected (linear interpolation or nearest interpolation. The interpolation
+is calculated using the results obtained through the simulation, being located at the central node of each element).
+- Cell size (m): defines the size of each cell for the raster results. 
+- Maximum critical diameter: the maximum critical diameter reached trought the simulation, meaning that sediments with higher diameters would not be carried by the flow. 
 - Manning coefficient:
 - Depth vector:
-- Critical diameter:
-- Bed shear stress:
-- Maximum bed shear stress:
-- Steamlines:
+- Critical diameter: diameter of the paricle that sets the threshold between motion and no motion under specific flow conditions. Particles with smaller diameters would be
+transported by the flow, while bigger particles would remain settled.
+- Bed shear stress: it is the force exerted by the flow on the bed surface beneath it, resulting from friction and roughness effects (N/m2). 
+- Maximum bed shear stress: the maximum bed shear stress reached at each specific element during the simulation (N/m2).
+- Streamlines: lines that represent the instant flow direction at a given moment. 
 
 Tab IBER PLUGINS
 ================
