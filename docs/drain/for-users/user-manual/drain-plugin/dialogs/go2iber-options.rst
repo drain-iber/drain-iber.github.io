@@ -108,16 +108,11 @@ Project details
 Numerical scheme
 ----------------
 
-- Numerical scheme: you can choose between various numerical schemes. 1st Order is recommended for hydraulic calculations, while DHD
- is recommended for hidrological rain-surface flow transfromations.
-- CFL: Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but 
-convergence issues may arise in the solution of the equations. A value of 0.45 can be considered appropriate as a starting point, and it can be lowered
- to 0.3 if convergence problems are observed.
-- Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In 
-practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
+- Numerical scheme: you can choose between various numerical schemes. 1st Order is recommended for hydraulic calculations, while DHD is recommended for hidrological rain-surface flow transfromations.
+- CFL: Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but convergence issues may arise in the solution of the equations. A value of 0.45 can be considered appropriate as a starting point, and it can be lowered to 0.3 if convergence problems are observed.
+- Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
 - Wet-dry limit: this is the depth threshold above which an element is considered wet. Below this value, the element is considered dry, 
-and therefore no computations are performed on it, unless it becomes wet. While in 
- river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m.
+and therefore no computations are performed on it, unless it becomes wet. While in river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m.
 - Viscosity coefficient:
   
   ..important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
@@ -143,8 +138,7 @@ Hydrological processes
 - Set rainfall raster:
 - Losses model: here you can select the infiltration model to apply. You can choose between *SCS* (Soil Conservation Service) infiltration model or *no losses* model 
 - CN multiplier: multiplier of the CN parameter of the SCS model. 
-- Ia: Initial abstraction. Refers to the portion of rainfall that is retained or lost before producing surface runoff. When no specific information about the catchment is available, 
-a typical value of 0.2 is often used.  
+- Ia: Initial abstraction. Refers to the portion of rainfall that is retained or lost before producing surface runoff. When no specific information about the catchment is available, a typical value of 0.2 is often used.  
 
 Tab IBER RESULTS
 ================
@@ -164,20 +158,18 @@ The following options are available:
 - Maximum specific discharge: the maximum specific discharge reached at each specific element during the simulation (m2/s).
 - Maximum water elevation: the maximum water elevation reached at each specific element during the simulation (m)
 - Energy: refers to the total hydraulic energy per unit weight of water, typically resulting from the sum of elevation head, pressure head, and velocity head, expressed in meters (m)
-- Froude number: a dimensionless number that represents the ratio between inertial and gravitational forces. 
-A value equal to 1 indicates critical flow; values less than 1 indicate subcritical flow, while values greater than 1 indicate supercritical flow.
+- Froude number: a dimensionless number that represents the ratio between inertial and gravitational forces. A value equal to 1 indicates critical flow; values less than 1 indicate subcritical flow, while values greater than 1 indicate supercritical flow.
 - Local time step:
 - Maximum local time step:
 - Hazard RD9/2008: calculated hazard according to RD9/2008 regulation (Spain). 
 - Hazard ACA 2003: flood hazard calculated following the criteria by the ACA (*Agencia Catalana del Agua*).
 - Raster results: if selected, raster results will be writen. The interpolation mode must be selected (linear interpolation or nearest interpolation. The interpolation
 is calculated using the results obtained through the simulation, being located at the central node of each element).
-- Cell size (m): defines the size of each cell for the raster results. 
+- Cell size: defines the size of each cell for the raster results (m). 
 - Maximum critical diameter: the maximum critical diameter reached trought the simulation, meaning that sediments with higher diameters would not be carried by the flow. 
-- Manning coefficient:
+- Manning coefficient: roughness parameter that represents the resistance of the ground surface to runoff movement (s/m^(1/3). 
 - Depth vector:
-- Critical diameter: diameter of the paricle that sets the threshold between motion and no motion under specific flow conditions. Particles with smaller diameters would be
-transported by the flow, while bigger particles would remain settled.
+- Critical diameter: diameter of the paricle that sets the threshold between motion and no motion under specific flow conditions. Particles with smaller diameters would be transported by the flow, while bigger particles would remain settled.
 - Bed shear stress: it is the force exerted by the flow on the bed surface beneath it, resulting from friction and roughness effects (N/m2). 
 - Maximum bed shear stress: the maximum bed shear stress reached at each specific element during the simulation (N/m2).
 - Streamlines: lines that represent the instant flow direction at a given moment. 
