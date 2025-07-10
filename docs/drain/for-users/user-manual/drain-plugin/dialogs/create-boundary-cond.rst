@@ -15,11 +15,11 @@ Then, a form will appear where we must to specify:
 
 .. figure:: img/create-boundary-cond.png
 
-  Window to create a new boundary condition.
+  Window to create a new boundary condition - 2D Inlet.
 
 - ID: identifier of the boundary condition.
 - Code: code of the boundary condition.
-- Descript: a sort description of the boundary condition.
+- Descript: a short description of the boundary condition.
 - BC Scenario: boundary condition scenario in which the new boundary condition will be stored.
 - Bounday Type: we can select two options:
     
@@ -27,3 +27,11 @@ Then, a form will appear where we must to specify:
     - *2D Outlet*: we use it to specify an outlet flow. It is necessary to select the flow condition *Supercritical/Critical* or *Subcritical*.
       If we select *Subcritical* is necessary to specify the type (*Weir* or *Given level*) and the crest definition (*Height* or *Elevation*) and their corresponding values.
 - Time Series: this option allows us to specify an inlet hydrograph. **It is only available when we select 2D inlet option**.
+
+.. figure:: img/create-boundary-cond.png
+
+  Window to create a new boundary condition - 2D Inlet.
+
+.. important::The boundary conditions are directly applied to a specific existing scenario, the one active while adding them or *current scenario*. If you want to specify the boundary conditions to a certain scenario make sure that it is the one active at the moment. 
+
+Once boundary conditions exist, they can be edited directly by enabling editing through the *Toggle Editing* button, either from the map or the attribute table.

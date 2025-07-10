@@ -113,8 +113,8 @@ Numerical scheme
 - Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
 - Wet-dry limit: this is the depth threshold above which an element is considered wet. Below this value, the element is considered dry, and therefore no computations are performed on it, unless it becomes wet. While in river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m.
 - Viscosity coefficient:
-  
-..important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
+ 
+.. important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
 
 Time & Simulation control
 -------------------------
@@ -144,7 +144,7 @@ Tab IBER RESULTS
 
 .. figure:: img/iber-results.png
   
-  Iber results.
+  Iber results. In the case of the figure above, the results Depth and Velocity will be displayed. 
 
 The following options are available:
 

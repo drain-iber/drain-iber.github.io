@@ -24,3 +24,6 @@ The following buttons are available:
 - Edit: it allows, by selecting a scenario, edit it.
 - Delete: it allows, by selecting a scenario, delete it.
 - Save to mesh: it allows, by selecting a scenario, save the boundary conditions in the mesh. **Previously we must to create one mesh, if don't, Drain will show an error**.
+.. figure:: img/boundary-condition-scenarios-manager-select-mesh.png
+   
+  Mesh selection.
