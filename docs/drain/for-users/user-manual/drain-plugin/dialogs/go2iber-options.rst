@@ -163,8 +163,7 @@ The following options are available:
 - Maximum local time step:
 - Hazard RD9/2008: calculated hazard according to RD9/2008 regulation (Spain). 
 - Hazard ACA 2003: flood hazard calculated following the criteria by the ACA (*Agencia Catalana del Agua*).
-- Raster results: if selected, raster results will be writen. The interpolation mode must be selected (linear interpolation or nearest interpolation. The interpolation
-is calculated using the results obtained through the simulation, being located at the central node of each element).
+- Raster results: if selected, raster results will be writen. The interpolation mode must be selected (linear interpolation or nearest interpolation. The interpolation is calculated using the results obtained through the simulation, being located at the central node of each element).
 - Cell size: defines the size of each cell for the raster results (m). 
 - Maximum critical diameter: the maximum critical diameter reached trought the simulation, meaning that sediments with higher diameters would not be carried by the flow. 
 - Manning coefficient: roughness parameter that represents the resistance of the ground surface to runoff movement (s/m^(1/3). 
