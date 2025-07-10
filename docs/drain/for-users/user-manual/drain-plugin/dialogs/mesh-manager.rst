@@ -57,4 +57,4 @@ Here you must select the layer that contains the infiltration information, such 
 
 Mesh options
 =============
-This field allows you to save the mesh with a specific name. 
+This field allows you to save the mesh with a specific name. This name will later help you identify the mesh you want to work with when assigning the boundary conditions scenario.
