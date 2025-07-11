@@ -21,3 +21,4 @@ To correctly define the section characteristics, **a valid Digital Elevation Mod
 
   .. note:: Make sure that the *Digitize by segment* mode is enabled in the QGIS menu. If another mode is selected—for example, *Digitize by shape*—the bridge geometry will follow that drawing style.
     
+You can manually edit the geometry.
