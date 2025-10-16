@@ -1,6 +1,6 @@
-============================
-Create a sample Drain schema
-============================
+==============================
+Create a sample IberGIS schema
+==============================
 
 .. only:: html
 
@@ -10,7 +10,7 @@ Create a sample Drain schema
 Create a sample geopackage
 ==========================
 
-To create a sample geopackage to start working, click on the Drain button and fill in the following fields:
+To create a sample geopackage to start working, click on the IberGIS button and fill in the following fields:
 
 .. figure:: img/create-schema/sample-schema/sample_gpkg.png
 

@@ -1,15 +1,16 @@
-=================
-Drain User Manual
-=================
+===================
+IberGIS User Manual
+===================
 
 .. toctree::
    :maxdepth: 2
    :numbered: 4
 
    introduction
-   what-is-drain
+   what-is-ibergis
    installation
    empty-schema
    sample-schema
-   drain-plugin/index
-   drain-toolbox
+   toc
+   drain-plugin/ibergis-plugin
+   ibergis-toolbox

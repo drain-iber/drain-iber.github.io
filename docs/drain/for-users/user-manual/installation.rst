@@ -1,13 +1,13 @@
-===============
+============
 Installation
-===============
+============
 
 .. only:: html
 
    .. contents::
       :local:
 
-As we have just seen in the section :ref:`what-is-drain`, in order to work with Drain we need to have QGIS installed.
+As we have just seen in the section :ref:`what-is-ibergis`, in order to work with IberGIS we need to have QGIS installed.
 
 Although it is not mandatory, it is recommended to have installed SWMM and Iber.
 
@@ -16,7 +16,7 @@ Although it is not mandatory, it is recommended to have installed SWMM and Iber.
 QGIS installation
 =================
 
-QGIS is the GIS client we use to work with Drain.
+QGIS is the GIS client we use to work with IberGIS.
 
 To download it we will go to the `download center of the QGIS web site <https://www.qgis.org/download/>`_ and close the donation window.
 
@@ -33,10 +33,10 @@ Once located, we can download it.
 
 Once QGIS has been downloaded, run the downloaded file and follow the instructions to install it.
 
-.. important:: To work with Drain **must** download the LTR version of QGIS.
+.. important:: To work with IberGIS **must** download the LTR version of QGIS.
 
-Drain installation
-==================
+IberGIS installation
+====================
 
 To download it, go to...
 

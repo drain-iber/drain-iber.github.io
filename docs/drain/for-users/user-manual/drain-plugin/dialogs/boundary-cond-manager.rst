@@ -23,7 +23,4 @@ The following buttons are available:
 - Duplicate: it allows, by selecting a scenario, to duplicate it. We must specify the *idval*, the *Name* and, optionally, a sort *Description* of the new boundary condition.
 - Edit: it allows, by selecting a scenario, edit it.
 - Delete: it allows, by selecting a scenario, delete it.
-- Save to mesh: it allows, by selecting a scenario, save the boundary conditions in the mesh. **Previously we must to create one mesh, if don't, Drain will show an error**.
-.. figure:: img/boundary-condition-scenarios-manager-select-mesh.png
-   
-  Mesh selection.
+- Save to mesh: it allows, by selecting a scenario, save the boundary conditions in the mesh. **Previously we must to create one mesh, if don't, IberGIS will show an error**.

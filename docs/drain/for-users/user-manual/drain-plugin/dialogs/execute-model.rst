@@ -9,9 +9,9 @@ Dialog Execute model
     .. contents::
        :local:
 
-
 .. figure:: img/execute-model.png
 
     Execute model.
 
-Window to execute the model. From the *Options* menu, you can access the *Go2Iber-options* panel, where you can configure any remaining simulation settings. **You must select the computational mesh** to be used in the simulation process, as well as **the directory where the model files will be saved**.
+Tool to run the simulations. We must specify the mesh we want to use and the folder to save it.
+By clicking the *Options* button, we can access the *Go2Iber-options* panel, where we can configure any remaining simulation settings.

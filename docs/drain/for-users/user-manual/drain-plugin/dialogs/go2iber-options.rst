@@ -11,6 +11,19 @@ Dialog Go2Iber options
 
 Tool to manage all the options involved in the simulation. We can manage the SWMM and Iber options.
 
+Tab IBERGIS OPTIONS
+===================
+
+.. figure:: img/ibergis-options.png
+
+    IBERGIS options.
+
+- Project name: name of the current project.
+- Description: a short description of the project.
+- User: name of the user or project author.
+- Creation date: creation date of the project.
+- Version: IberGIS version.
+
 Tab SWMM OPTIONS
 ================
 
@@ -34,7 +47,6 @@ The following options are available:
 - Ignore routing: allow choice if only runoff should be computed even if the project contains drainage system links and nodes. The default is NO.
 - Ignore snowmelt:allow choice if snowmelt calculations should be ignored when a project file contains snow pack objects. The default is NO.
 - Ignore quality: allos choice if pollutant washoff, routing and treatment should be ignored in a project that has pollutants defined. The default is NO.
-- Tempdir:
 - Force main equation: establishes wheter the Hazen-Williams (H-W) or the Darcy-Wesbach (D-W) equation will be used to compute friction losses for pressurized flow in conduits that have been assigned
   a circular force main cross-section shape. The default is H-W.
 - Inertial damping: indicates how the inertial terms in the Saint Venant momentum equation will be handled under dynamic wave flow routing.
@@ -47,7 +59,6 @@ The following options are available:
 - Wet step: time step length used to compute runoff from subcatchments during periods of rainfall or when ponded water still remains on the surface. The default is 00:05:00.
 - Sweep start: day of the year (month/day) when street sweeping operations begin. The default is 01/01.
 - Sweep end: day of the year (month/day) when street sweeping operations end. The default is 12/31.
-- Rule step:
 - Variable step: safety factor applied to a variable time step computed for each time period under dynamic wave flow routing. The variable time step is computed so as to satisfy the Courant
   stability criterion for each conduit and yet not exceed the *Routing step* value. If the safety factor is 0, then no variable time step is used. The default is 0.75.
 - Normal flow limited: specifies which condition is checked to determine if flow in a conduit is supercritical and should thus be limited to the normal flow.
@@ -96,48 +107,40 @@ Tab IBER OPTIONS
 
 The following options are available:
 
-Project details
----------------
-
-- Project name: name of the project.
-- Description: a short description of the project.
-- User: name of the user.
-- Creation date: creation date of the project.
-- Version: Drain version.
-
 Numerical scheme
 ----------------
 
-- Numerical scheme: you can choose between various numerical schemes. 1st Order is recommended for hydraulic calculations, while DHD is recommended for hidrological rain-surface flow transfromations.
-- CFL: Courant–Friedrichs–Lewy condition. The user must set the value. If a very high value is set, the computation time will be reduced, but convergence issues may arise in the solution of the equations. A value of 0.45 can be considered appropriate as a starting point, and it can be lowered to 0.3 if convergence problems are observed.
-- Max time increment: Sets the maximum value of the time step used by the program to integrate the flow equations. This is a maximum value. In practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition.
-- Wet-dry limit: this is the depth threshold above which an element is considered wet. Below this value, the element is considered dry, and therefore no computations are performed on it, unless it becomes wet. While in river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m.
-- Viscosity coefficient:
+- Numerical scheme: defines the numerical scheme for the Saint-Venant equations used in calculating surface flow. Available options are *1st Order*, *2nd Order*, *DHD*  and *DHD Basin*.
+  The default is *DHD*.
+- CFL: Courant-Friedrichs-Lewy condition. The user must set the value.
+  If a very high value is set, the computation time will be reduced, but convergence issues may arise in the solution of the equations.
+  A value of 0.45 can be considered appropriate as a starting point, and it can be lowered to 0.3 if convergence problems are observed.
+- Max time increment: sets the maximum value of the time step used by the program to integrate the flow equations.
+  This is a maximum value. In practice, the time step used during the simulation will be the minimum between this value and the one computed based on the CFL condition. The default is 1.
+- Wet-dry limit: this is the depth threshold above which an element is considered wet.
+  Below this value, the element is considered dry, and therefore no computations are performed on it, unless it becomes wet.
+  While in river engineering, a threshold of 0.01 m is generally reasonable, in some cases this value could be reduced to as little as 0.001 m. The default is 0.0001.
+- Molecular viscosity molecular viscosity coefficient applied to the flow to represent numerical diffusion effects. The default is 0.000001.
  
 .. important:: DHD and DHD Basin schemes must not be used for hydraulic simulations
 
 Time & Simulation control
 -------------------------
 
-- Initial time: instant in which the calculation begins. It is just an "offset" and does not affect the results. 
-- Max simulation time: instant in which the calculation ends. The time difference between the "initial time" and the "max simulation time" indicates the total simulation time.
-- Results 2D time interval: indicates the time interval length in which results are calculated
-- Timeseries time interval: selection of the time interval length in which results are written
-- Simulation details are written:
-- New simulation or current simulation:
-- Enable or disable simulation plan:
-- Plan ID:
+- Results 2D time interval: time interval, in seconds, that defines how often a 2D result is saved during the simulation. This must match the *Report step* value.
+  The default is 300.
+- Timeseries time interval: time interval, in seconds, between data records in the time series. If not defined or greater than the *Result 2D time interval*, we use that value.
+  The default is 300. 
 
 Hydrological processes
 ----------------------
 
-- Start time infiltration:
-- Precipitation:
-- Set rainfall for all hyetografs:
-- Set rainfall raster:
-- Losses model: here you can select the infiltration model to apply. You can choose between *SCS* (Soil Conservation Service) infiltration model or *no losses* model 
-- CN multiplier: multiplier of the CN parameter of the SCS model. 
-- Ia: Initial abstraction. Refers to the portion of rainfall that is retained or lost before producing surface runoff. When no specific information about the catchment is available, a typical value of 0.2 is often used.  
+- Start time: simulation start time, in seconds. The default is 0.
+- Precipitation: selects the type of precipitation applied in the model. The available options are *Hyetograph*, *Raster* and *No rain*. The default is *No rain*.
+- Set rainfall raster: allows to choose between the defined precipitation rasters.
+- Losses method: method used to calculate infiltration losses. The default is *SCS*.
+- CN multiplier: multiplier factor applied to the Curve Number to adjust runoff losses. The default is 1.
+- Ia: initial abstraction. Storage ratio before the start of flow. The default is 0.2.  
 
 Tab IBER RESULTS
 ================
@@ -148,29 +151,50 @@ Tab IBER RESULTS
 
 The following options are available:
 
-- Depth: refers to the vertical distance from the bed to the free surface of the water, expressed in meters (m). 
-- Velocity: refers to the depth-averaged flow velocity, expressed in meters per second (m/s)
-- Specific discharge: refers to the flow rate per unit width, expressed in square meters per second (m²/s)
-- Water elevation: refers to the height of the water surface, commonly expressed in meters above the sea level (m).
-- Maximum depth: the maximum water depth reached at each specific element during the simulation (m).
-- Maximum velocity: the maximum velocity reached at each specific element during the simulation (m/s).
-- Maximum specific discharge: the maximum specific discharge reached at each specific element during the simulation (m2/s).
-- Maximum water elevation: the maximum water elevation reached at each specific element during the simulation (m)
-- Energy: refers to the total hydraulic energy per unit weight of water, typically resulting from the sum of elevation head, pressure head, and velocity head, expressed in meters (m)
-- Froude number: a dimensionless number that represents the ratio between inertial and gravitational forces. A value equal to 1 indicates critical flow; values less than 1 indicate subcritical flow, while values greater than 1 indicate supercritical flow.
-- Local time step:
-- Maximum local time step:
-- Hazard RD9/2008: calculated hazard according to RD9/2008 regulation (Spain). 
-- Hazard ACA 2003: flood hazard calculated following the criteria by the ACA (*Agencia Catalana del Agua*).
-- Raster results: if selected, raster results will be writen. The interpolation mode must be selected (linear interpolation or nearest interpolation. The interpolation is calculated using the results obtained through the simulation, being located at the central node of each element).
-- Cell size: defines the size of each cell for the raster results (m). 
-- Maximum critical diameter: the maximum critical diameter reached trought the simulation, meaning that sediments with higher diameters would not be carried by the flow. 
-- Manning coefficient: roughness parameter that represents the resistance of the ground surface to runoff movement (s/m^(1/3). 
-- Depth vector:
-- Critical diameter: diameter of the paricle that sets the threshold between motion and no motion under specific flow conditions. Particles with smaller diameters would be transported by the flow, while bigger particles would remain settled.
-- Bed shear stress: it is the force exerted by the flow on the bed surface beneath it, resulting from friction and roughness effects (N/m2). 
-- Maximum bed shear stress: the maximum bed shear stress reached at each specific element during the simulation (N/m2).
-- Streamlines: lines that represent the instant flow direction at a given moment. 
+Hydrodynamics
+-------------
+
+- Depth: water depth results, in meters, in each mesh cell over time.
+- Velocity: flow velocity result, in m/s, in each mesh cell over time.
+- Specific discharge: specific discharge result, in m²/s
+- Water elevation: total water level result, in meters, the sum of the ground elevation plus the water depth.
+
+Maximums
+--------
+
+- Maximum depth: maximum water depth, in meters, reached in each cell during the simulation.
+- Maximum velocity: maximum flow velocity, in m/s, reached in each cell during the simulation.
+- Maximum specific discharge: maximum specific flow rate, in m²/s, during the simulation.
+- Maximum water elevation: maximum total water level, in meters, during the simulation.
+
+Other results
+-------------
+
+- Energy: represents the total energy of the flow, calculated as the sum of the water level and the kinetic energy.
+- Froude number: Froude number indicating the hydraulic flow regime: subcritical (Fr<1), critical (Fr=1) or supercritical (Fr>1).
+- Local time step: local time step calculated according to the Courant-Friedrichs-Lewy (CFL) stability condition.
+- Maximum local time step: maximum allowable value of the local time step in each model cell, which limits the time increment calculated according to the Courant condition.
+
+Hazard
+------
+
+- Hazard RD9/2008: hydraulic hazard criterion defined by the Spanish Ministry of the Environment, which classifies risk based on water depth and flow velocity. 
+- Hazard ACA 2003: hazard criterion of the Catalan Water Agency (2003), which classifies risk zones based on water depth and flow velocity.
+- Pedestrians: evaluates flow hazards for pedestrians, considering water depth and velocity as determining stability factors (UPC criterion).
+- Vehicles: evaluates the safety of vehicles against entrainment by currents, based on hydraulic parameters such as water depth and flow velocity (Australian criterion (Shand et al., 2011)).
+
+Raster results
+--------------
+
+- Raster results: interpolation method for raster results. The available options are *Linear interpolation* and *Nearest interpolation*. The default is *Linear interpolation*.
+- Cell size: cell size of the output rasters, in meters. The default is 100.
+- Maximums at the end: adds one more timestep at the end of the result rasters with the maximum values obtained.
+- Use raster frame: allows to delimit the geographic area where the raster results will be generated. The parameters are defined in the following group, *Raster results frame*.
+
+Raster results frame
+--------------------
+
+Allows to specify the coordinates of the raster boundary.
 
 Tab IBER PLUGINS
 ================
@@ -181,5 +205,31 @@ Tab IBER PLUGINS
 
 The following options are available:
 
-- Only gullies or complete network:
-- Enable or disable outlet loss:
+- Only inlets or complete network: allows to choose whether to simulate only surface runoff (only inlets) or to include the complete drainage network (complete network).
+  The default is *Complete network*.
+- Enable or disable outlet loss: enables or disables the consideration of energy losses in the model outputs.
+
+Tab CHECK PROJECT
+-----------------
+
+.. figure:: img/check-project-tab.png
+
+    Check project.
+
+Sets maximum and minimum values that can be included or excluded, for parameters:
+manning, cellsize, sfactor, slope, street_vol, orifice_cd, roughness, mfactor, ufactor, outlet_vol and weir_cd.
+
+Tab RASTER OPTIONS
+------------------
+
+.. figure:: img/raster-options.png
+
+    Raster options.
+
+Set the maximum and minimum values for raster results, sets the symbology color, and allows you to exclude values for the parameters:
+depth, velocity, water elevation, hazard ACA, severe hazard RD9-2008, local time step, specific discharge X, specific discharge Y, energy,
+Froude, infiltration rate, rain depth, velocity X, velocity Y, water performance, max depth, max velocity, max water elevation, max hazard ACA,
+max severe hazard RD9-2008, max local time step and max specific discharge.
+
+
+

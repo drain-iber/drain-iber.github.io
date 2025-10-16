@@ -1,6 +1,6 @@
-============================
-Create an empty Drain schema
-============================
+==============================
+Create an empty IberGIS schema
+==============================
 
 .. only:: html
 
@@ -10,7 +10,7 @@ Create an empty Drain schema
 Create an empty geopackage
 ==========================
 
-To create an empty geopackage to start working, click on the Drain button and fill in the following fields:
+To create an empty geopackage to start working, click on the IberGIS button and fill in the following fields:
 
 .. figure:: img/create-schema/empty-schema/empty_gpkg.png
 
