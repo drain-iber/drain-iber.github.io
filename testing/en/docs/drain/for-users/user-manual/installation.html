@@ -34,8 +34,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4. Create an empty Drain schema" href="empty-schema.html" />
-    <link rel="prev" title="2. What is Drain?" href="what-is-drain.html" />
+    <link rel="next" title="4. Create an empty IberGIS schema" href="empty-schema.html" />
+    <link rel="prev" title="2. What is IberGIS?" href="what-is-ibergis.html" />
 <meta
 	name="description"
 	content="Drain testing documentation: 3. Installation"
@@ -81,20 +81,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">FOR USERS</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Drain User Manual</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">IberGIS User Manual</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="what-is-drain.html">2. What is Drain?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="what-is-ibergis.html">2. What is IberGIS?</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3. Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#qgis-installation">3.1. QGIS installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#drain-installation">3.2. Drain installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ibergis-installation">3.2. IberGIS installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#swmm-installation-optional">3.3. SWMM installation (optional)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#iber-installation-optional">3.4. Iber installation (optional)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="empty-schema.html">4. Create an empty Drain schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample-schema.html">5. Create a sample Drain schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drain-plugin/index.html">6. Drain Plugin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drain-toolbox.html">7. Drain toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="empty-schema.html">4. Create an empty IberGIS schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample-schema.html">5. Create a sample IberGIS schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toc.html">6. Table of Contents (ToC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drain-plugin/ibergis-plugin.html">7. IberGIS Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ibergis-toolbox.html">8. IberGIS toolbox</a></li>
 </ul>
 </li>
 </ul>
@@ -121,14 +122,14 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Drain User Manual</a></li>
+          <li class="breadcrumb-item"><a href="index.html">IberGIS User Manual</a></li>
       <li class="breadcrumb-item active"><span class="section-number">3. </span>Installation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Drain/Drain-Documentation/blob/master/docs/drain/for-users/user-manual/installation.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="what-is-drain.html" class="btn btn-neutral float-left" title="2. What is Drain?" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="empty-schema.html" class="btn btn-neutral float-right" title="4. Create an empty Drain schema" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="what-is-ibergis.html" class="btn btn-neutral float-left" title="2. What is IberGIS?" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="empty-schema.html" class="btn btn-neutral float-right" title="4. Create an empty IberGIS schema" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -140,12 +141,12 @@
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#qgis-installation" id="id6">QGIS installation</a></p></li>
-<li><p><a class="reference internal" href="#drain-installation" id="id7">Drain installation</a></p></li>
+<li><p><a class="reference internal" href="#ibergis-installation" id="id7">IberGIS installation</a></p></li>
 <li><p><a class="reference internal" href="#swmm-installation-optional" id="id8">SWMM installation (optional)</a></p></li>
 <li><p><a class="reference internal" href="#iber-installation-optional" id="id9">Iber installation (optional)</a></p></li>
 </ul>
 </nav>
-<p>As we have just seen in the section <a class="reference internal" href="what-is-drain.html#what-is-drain"><span class="std std-ref">What is Drain?</span></a>, in order to work with Drain we need to have QGIS installed.</p>
+<p>As we have just seen in the section <a class="reference internal" href="what-is-ibergis.html#what-is-ibergis"><span class="std std-ref">What is IberGIS?</span></a>, in order to work with IberGIS we need to have QGIS installed.</p>
 <p>Although it is not mandatory, it is recommended to have installed SWMM and Iber.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -153,7 +154,7 @@
 </div>
 <section id="qgis-installation">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">3.1. </span>QGIS installation</a><a class="headerlink" href="#qgis-installation" title="Link to this heading"></a></h2>
-<p>QGIS is the GIS client we use to work with Drain.</p>
+<p>QGIS is the GIS client we use to work with IberGIS.</p>
 <p>To download it we will go to the <a class="reference external" href="https://www.qgis.org/download/">download center of the QGIS web site</a> and close the donation window.</p>
 <figure class="align-default" id="id2">
 <img alt="../../../../_images/download_qgis_1.png" src="../../../../_images/download_qgis_1.png" />
@@ -172,11 +173,11 @@ Once located, we can download it.</p>
 <p>Once QGIS has been downloaded, run the downloaded file and follow the instructions to install it.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>To work with Drain <strong>must</strong> download the LTR version of QGIS.</p>
+<p>To work with IberGIS <strong>must</strong> download the LTR version of QGIS.</p>
 </div>
 </section>
-<section id="drain-installation">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">3.2. </span>Drain installation</a><a class="headerlink" href="#drain-installation" title="Link to this heading"></a></h2>
+<section id="ibergis-installation">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">3.2. </span>IberGIS installation</a><a class="headerlink" href="#ibergis-installation" title="Link to this heading"></a></h2>
 <p>To download it, go to…</p>
 </section>
 <section id="swmm-installation-optional">
@@ -210,15 +211,15 @@ scroll through the page until we locate the file that we have to download to be 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="what-is-drain.html" class="btn btn-neutral float-left" title="2. What is Drain?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="empty-schema.html" class="btn btn-neutral float-right" title="4. Create an empty Drain schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="what-is-ibergis.html" class="btn btn-neutral float-left" title="2. What is IberGIS?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="empty-schema.html" class="btn btn-neutral float-right" title="4. Create an empty IberGIS schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2025, Drain.
-      <span class="lastupdated">Last updated on 2025 May 27, 10:28 +0200.
+      <span class="lastupdated">Last updated on 2025 Oct 17, 12:46 +0200.
       </span></p>
   </div>
 
@@ -257,6 +258,10 @@ scroll through the page until we locate the file that we have to download to be 
 			
 			<dd>
 				<a href="https://drain-iber.github.io/testing/en/docs/drain/for-users/user-manual/installation.html">testing</a>
+			</dd>
+			
+			<dd>
+				<a href="https://drain-iber.github.io/1.0/en/docs/drain/for-users/user-manual/installation.html">1.0</a>
 			</dd>
 			
 		</dl>

@@ -79,7 +79,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">FOR USERS</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Drain User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">IberGIS User Manual</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FOR DEVELOPERS</span></p>
 <ul>
@@ -116,12 +116,35 @@
              
   <section id="dialog-mesh-manager">
 <span id="id1"></span><h1><span class="section-number">7. </span>Dialog Mesh manager<a class="headerlink" href="#dialog-mesh-manager" title="Link to this heading"></a></h1>
+<p>Tool for incorporating the mesh into the model. Having a mesh is not only essential for the calculations to be done, since it defines the calculation elements;
+but is also the one getting the values of the distributed parameters of the model trough its net, such as land uses or curve number for the infiltration model.
+The mesh can be created or directly imported. The different scenarios created for diverse boundary conditions must be also saved to a existing mesh.</p>
 <figure class="align-default" id="id2">
 <img alt="../../../../../../_images/mesh-manager.png" src="../../../../../../_images/mesh-manager.png" />
 <figcaption>
 <p><span class="caption-text">Mesh manager.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<p>The following buttons are available:</p>
+<ul class="simple">
+<li><p>Create: allows to create a new mesh. In the new window, we must specify:</p>
+<ul>
+<li><p>Input data: checks to perform on layers to detect errors.</p></li>
+<li><p>Transitions: allows the user to configure the mesh transition settings, which control how smoothly the mesh resolution decreases from the breaklines toward the interior of the domain.
+To this aim, the <em>Enable fine-tuned transitions</em> must be active.
+In this case, the user can define the value of the transition slope, the distance in which the transition begins, and the transition extent.</p></li>
+<li><p>Elevation: DEM layer to obtain elevations.</p></li>
+<li><p>Roughness: layer to obtain roughness values (Manning’s coefficient).</p></li>
+<li><p>Losses: layer to obtain loss values (Curve Number).</p></li>
+<li><p>Mesh options: this field allows  to save the mesh with a specific name.
+This name will later help you identify the mesh you want to work with when assigning the boundary conditions scenario.</p></li>
+</ul>
+</li>
+<li><p>View: allows, by selecting a mesh, see it in the ToC.</p></li>
+<li><p>Import: allows import a mesh from computer files.</p></li>
+<li><p>Export: allows export a mesh.</p></li>
+<li><p>Delete: allows, by selecting a mesh, delete it.</p></li>
+</ul>
 </section>
 
 
@@ -133,7 +156,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2025, Drain.
-      <span class="lastupdated">Last updated on 2025 May 27, 10:28 +0200.
+      <span class="lastupdated">Last updated on 2025 Oct 17, 12:46 +0200.
       </span></p>
   </div>
 
@@ -172,6 +195,10 @@
 			
 			<dd>
 				<a href="https://drain-iber.github.io/testing/en/docs/drain/for-users/user-manual/drain-plugin/dialogs/mesh-manager.html">testing</a>
+			</dd>
+			
+			<dd>
+				<a href="https://drain-iber.github.io/1.0/en/docs/drain/for-users/user-manual/drain-plugin/dialogs/mesh-manager.html">1.0</a>
 			</dd>
 			
 		</dl>
