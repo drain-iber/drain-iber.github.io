@@ -12,7 +12,7 @@ Drain Documentation |version|
 
   .. hint:: Looking for documentation for versions newer than
     |version|? Check out the
-    `testing documentation <https://docs.drain.org/testing/en/>`_.
+    `testing documentation <https://drain-iber.github.io/testing/en/>`_.
 
 .. note:: Drain documentation is available in multiple languages and versions.
   Expand the :guilabel:`Drain Documentation` menu at the bottom of the
